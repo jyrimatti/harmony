@@ -14,8 +14,8 @@ FirmwareRevision = "100.1.1"
 type = "Switch"
 
 [services.characteristics]
-Name = "Vol +"
-ConfiguredName = "Vol +"
+Name = "Vol lisää"
+ConfiguredName = "Vol lisää"
 [services.characteristics.On]
 cmd = "cd harmony; ./cmd/volume_up.sh"
 
@@ -24,8 +24,8 @@ cmd = "cd harmony; ./cmd/volume_up.sh"
 type = "Switch"
 
 [services.characteristics]
-Name = "Vol -"
-ConfiguredName = "Vol -"
+Name = "Vol vähemmän"
+ConfiguredName = "Vol vähemmän"
 [services.characteristics.On]
 cmd = "cd harmony; ./cmd/volume_down.sh"
 
