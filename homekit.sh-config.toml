@@ -34,8 +34,8 @@ cmd = "cd harmony; ./cmd/volume_down.sh"
 type = "Switch"
 
 [services.characteristics]
-Name = "Kanava +"
-ConfiguredName = "Kanava +"
+Name = "Seuraava kanava"
+ConfiguredName = "Seuraava kanava"
 [services.characteristics.On]
 cmd = "cd harmony; ./cmd/channel_up.sh"
 
@@ -44,8 +44,8 @@ cmd = "cd harmony; ./cmd/channel_up.sh"
 type = "Switch"
 
 [services.characteristics]
-Name = "Kanava -"
-ConfiguredName = "Kanava -"
+Name = "Edellinen kanava"
+ConfiguredName = "Edellinen kanava"
 [services.characteristics.On]
 cmd = "cd harmony; ./cmd/channel_down.sh"
 
