@@ -1,0 +1,120 @@
+[[services]]
+type = "AccessoryInformation"
+
+[services.characteristics]
+Identify = {} # leave property completely out 'cos otherwise Homekit won't accept
+Manufacturer = "Jyri-Matti Lähteenmäki"
+Model = "Harmony"
+Name = "Harmony"
+SerialNumber = "AA:AA:AA:AA:AA:FF"
+FirmwareRevision = "100.1.1"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Vol +"
+ConfiguredName = "Vol +"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/volume_up.sh"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Vol -"
+ConfiguredName = "Vol -"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/volume_down.sh"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Kanava +"
+ConfiguredName = "Kanava +"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/channel_up.sh"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Kanava -"
+ConfiguredName = "Kanava -"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/channel_down.sh"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Sammuta"
+ConfiguredName = "Sammuta"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/power_off.sh"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "TV"
+ConfiguredName = "TV"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/start_activity.sh 'Watch TV'"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Musiikki"
+ConfiguredName = "Musiikki"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/start_activity.sh 'Listen to Music'"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "AppleTV"
+ConfiguredName = "AppleTV"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/start_activity.sh 'Watch Apple TV'"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "BlueRay/DVD"
+ConfiguredName = "BlueRay/DVD"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/start_activity.sh 'Watch a Movie'"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Radio"
+ConfiguredName = "Radio"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/start_activity.sh 'Radio'"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "Karaoke"
+ConfiguredName = "Karaoke"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/start_activity.sh 'Karaoke'"
