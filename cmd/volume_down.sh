@@ -2,4 +2,9 @@
 #! nix-shell --pure -i dash -I channel:nixos-23.11-small -p nix dash
 set -eu
 
-./command.sh "VolumeDown"
+getset=${1:-}
+
+if [ "$getset" = "Set" ]; then
+    ./command.sh "VolumeDown"
+    echo 0
+fi

@@ -3,5 +3,9 @@
 set -eu
 
 activity="$1"
+getset=${2:-}
 
-./query.sh start_activity --activity "$activity"
+if [ "$getset" = "Set" ]; then
+    ./query.sh start_activity --activity "$activity"
+    echo 0
+fi

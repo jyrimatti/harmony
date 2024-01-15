@@ -2,4 +2,9 @@
 #! nix-shell --pure -i dash -I channel:nixos-23.11-small -p nix dash
 set -eu
 
-./query.sh power_off
+getset=${1:-}
+
+if [ "$getset" = "Set" ]; then
+    ./query.sh power_off
+    echo 0
+fi

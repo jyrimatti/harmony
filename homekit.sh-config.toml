@@ -94,8 +94,8 @@ cmd = "cd harmony; ./cmd/start_activity.sh 'Watch Apple TV'"
 type = "Switch"
 
 [services.characteristics]
-Name = "BlueRay/DVD"
-ConfiguredName = "BlueRay/DVD"
+Name = "BlueRay DVD"
+ConfiguredName = "BlueRay DVD"
 [services.characteristics.On]
 cmd = "cd harmony; ./cmd/start_activity.sh 'Watch a Movie'"
 
