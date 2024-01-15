@@ -67,7 +67,7 @@ type = "Switch"
 Name = "TV"
 ConfiguredName = "TV"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Watch TV'"
+cmd = "cd harmony; ./cmd/start_activity.sh \"Watch TV\""
 
 
 [[services]]
@@ -77,7 +77,7 @@ type = "Switch"
 Name = "Musiikki"
 ConfiguredName = "Musiikki"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Listen to Music'"
+cmd = "cd harmony; ./cmd/start_activity.sh \"Listen to Music\""
 
 
 [[services]]
@@ -87,7 +87,7 @@ type = "Switch"
 Name = "AppleTV"
 ConfiguredName = "AppleTV"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Watch Apple TV'"
+cmd = "cd harmony; ./cmd/start_activity.sh \"Watch Apple TV\""
 
 
 [[services]]
@@ -97,7 +97,7 @@ type = "Switch"
 Name = "BlueRay DVD"
 ConfiguredName = "BlueRay DVD"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Watch a Movie'"
+cmd = "cd harmony; ./cmd/start_activity.sh \"Watch a Movie\""
 
 
 [[services]]
@@ -107,7 +107,7 @@ type = "Switch"
 Name = "Radio"
 ConfiguredName = "Radio"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Radio'"
+cmd = "cd harmony; ./cmd/start_activity.sh Radio"
 
 
 [[services]]
@@ -117,4 +117,4 @@ type = "Switch"
 Name = "Karaoke"
 ConfiguredName = "Karaoke"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Karaoke'"
+cmd = "cd harmony; ./cmd/start_activity.sh Karaoke"
