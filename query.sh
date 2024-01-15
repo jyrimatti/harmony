@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure -i dash -I channel:nixos-23.05-small -p dash gnugrep gnused python3Packages.aioharmony
+#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p dash gnugrep gnused python3Packages.aioharmony
 set -eu
 
 command="$*"
