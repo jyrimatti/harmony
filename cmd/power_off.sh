@@ -6,5 +6,6 @@ getset=${1:-}
 
 if [ "$getset" = "Set" ]; then
     ./query.sh power_off
-    echo 0
 fi
+
+echo 0

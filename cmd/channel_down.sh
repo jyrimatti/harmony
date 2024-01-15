@@ -6,5 +6,6 @@ getset=${1:-}
 
 if [ "$getset" = "Set" ]; then
     ./command.sh "ChannelDown"
-    echo 0
 fi
+
+echo 0

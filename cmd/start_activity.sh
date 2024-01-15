@@ -7,5 +7,6 @@ getset=${2:-}
 
 if [ "$getset" = "Set" ]; then
     ./query.sh start_activity --activity "$activity"
-    echo 0
 fi
+
+echo 0

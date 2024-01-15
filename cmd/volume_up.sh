@@ -6,5 +6,6 @@ getset=${1:-}
 
 if [ "$getset" = "Set" ]; then
     ./command.sh "VolumeUp"
-    echo 0
 fi
+
+echo 0
