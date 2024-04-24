@@ -173,3 +173,13 @@ Name = "Karaoke"
 ConfiguredName = "Karaoke"
 [services.characteristics.On]
 cmd = "cd harmony; ./cmd/start_activity.sh 50868496"
+
+
+[[services]]
+type = "Switch"
+
+[services.characteristics]
+Name = "OK"
+ConfiguredName = "OK"
+[services.characteristics.On]
+cmd = "cd harmony; ./cmd/ok.sh"
