@@ -2,10 +2,10 @@
 #! nix-shell --pure -i dash -I channel:nixos-23.11-small -p nix dash
 set -eu
 
-getset=${1:-}
+getset="${1:-}"
 
 if [ "$getset" = "Set" ]; then
-    ./command.sh "ChannelDown"
+    response="$(./command.sh "ChannelDown")"
 fi
 
 echo 0

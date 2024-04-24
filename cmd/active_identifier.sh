@@ -2,10 +2,4 @@
 #! nix-shell --pure -i dash -I channel:nixos-23.11-small -p nix dash
 set -eu
 
-getset="${1:-}"
-
-if [ "$getset" = "Set" ]; then
-    response="$(./command.sh "ChannelUp")"
-fi
-
-echo 0
+./query.sh show_current_activity | sed 's/.*(\([0-9]*\))/\1/'

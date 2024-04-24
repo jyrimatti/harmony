@@ -5,7 +5,7 @@ set -eu
 getset="${1:-}"
 
 if [ "$getset" = "Set" ]; then
-    response="$(./command.sh "ChannelUp")"
+    response="$(./command.sh "Mute")"
 fi
 
 echo 0

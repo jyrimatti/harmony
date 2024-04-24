@@ -5,7 +5,7 @@ set -eu
 getset=${1:-}
 
 if [ "$getset" = "Set" ]; then
-    ./command.sh "VolumeUp"
+    response="$(./command.sh "VolumeUp")"
 fi
 
 echo 0
