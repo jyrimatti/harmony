@@ -5,7 +5,9 @@ set -eu
 getset="${1:-}"
 
 if [ "$getset" = "Set" ]; then
-    response="$(./command.sh "Mute")"
+    response1="$(dash ./command.sh 67020089 Mute)"
+    response2="$(dash ./command.sh 67020091 Mute)"
+    echo 1
 fi
 
 echo 0

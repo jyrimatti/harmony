@@ -1,8 +1,8 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p dash
+#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p dash nix curl cacert websocat jq
 set -eu
 
-command="$1"
+device="$1"
+command="$2"
 
-device_id="$(./query.sh show_current_activity | sed 's/.*(\([0-9]*\))/\1/')"
-./query.sh send_command --device_id "$device_id" --command "$command"
+dash ./query.sh 'vnd.logitech.harmony/vnd.logitech.harmony.engine?holdAction' '"status":"press","verb":"render","action": "{\"command\":\"'"$command"'\",\"type\":\"IRCommand\",\"deviceId\":\"'"$device"'\"}"'

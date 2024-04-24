@@ -5,7 +5,8 @@ set -eu
 getset="${1:-}"
 
 if [ "$getset" = "Set" ]; then
-    response="$(./command.sh "ChannelDown")"
+    response="$(dash ./command.sh 67020089 ChannelDown)"
+    echo 1
 fi
 
 echo 0

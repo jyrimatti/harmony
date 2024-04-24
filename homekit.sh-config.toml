@@ -10,55 +10,55 @@ SerialNumber = "AA:AA:AA:AA:AA:FF"
 FirmwareRevision = "100.1.1"
 
 
-[[services]]
-type = "Television"
-
-[services.characteristics]
-ConfiguredName = "TV"
-Name = "TV"
-RemoteKey = 0
-SleepDiscoveryMode = 0
-[services.characteristics.Active]
-cmd = "cd harmony; ./cmd/active.sh"
-[services.characteristics.ActiveIdentifier]
-cmd = "cd harmony; ./cmd/active_identifier.sh"
-
-
-[[services]]
-type = "TelevisionSpeaker"
-
-[services.characteristics.Mute]
-cmd = "cd harmony; ./cmd/mute.sh"
-[services.characteristics.VolumeSelector]
-cmd = "cd harmony; ./cmd/volume.sh"
-
-
-[[services]]
-type = "InputSource"
-
-[services.characteristics]
-Name = "Watch TV"
-ConfiguredName = "Watch TV"
-InputSourceType = 3
-InputDeviceType = 1
-[services.characteristics.CurrentVisibilityState]
-cmd = "cd harmony; ./cmd/current_activity.sh 'Watch TV'"
-[services.characteristics.IsConfigured]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Watch TV'"
-
-
-[[services]]
-type = "InputSource"
-
-[services.characteristics]
-Name = "Listen to Music"
-ConfiguredName = "Listen to Music"
-InputSourceType = 8
-InputDeviceType = 5
-[services.characteristics.CurrentVisibilityState]
-cmd = "cd harmony; ./cmd/current_activity.sh 'Listen to Music'"
-[services.characteristics.IsConfigured]
-cmd = "cd harmony; ./cmd/start_activity.sh 'Listen to Music'"
+#[[services]]
+#type = "Television"
+#
+#[services.characteristics]
+#ConfiguredName = "TV"
+#Name = "TV"
+#RemoteKey = 0
+#SleepDiscoveryMode = 0
+#[services.characteristics.Active]
+#cmd = "cd harmony; ./cmd/active.sh"
+#[services.characteristics.ActiveIdentifier]
+#cmd = "cd harmony; ./cmd/active_identifier.sh"
+#
+#
+#[[services]]
+#type = "TelevisionSpeaker"
+#
+#[services.characteristics.Mute]
+#cmd = "cd harmony; ./cmd/mute.sh"
+#[services.characteristics.VolumeSelector]
+#cmd = "cd harmony; ./cmd/volume.sh"
+#
+#
+#[[services]]
+#type = "InputSource"
+#
+#[services.characteristics]
+#Name = "Watch TV"
+#ConfiguredName = "Watch TV"
+#InputSourceType = 3
+#InputDeviceType = 1
+#[services.characteristics.CurrentVisibilityState]
+#cmd = "cd harmony; ./cmd/current_activity.sh 'Watch TV'"
+#[services.characteristics.IsConfigured]
+#cmd = "cd harmony; ./cmd/start_activity.sh 'Watch TV'"
+#
+#
+#[[services]]
+#type = "InputSource"
+#
+#[services.characteristics]
+#Name = "Listen to Music"
+#ConfiguredName = "Listen to Music"
+#InputSourceType = 8
+#InputDeviceType = 5
+#[services.characteristics.CurrentVisibilityState]
+#cmd = "cd harmony; ./cmd/current_activity.sh 'Listen to Music'"
+#[services.characteristics.IsConfigured]
+#cmd = "cd harmony; ./cmd/start_activity.sh 'Listen to Music'"
 
 
 
@@ -109,10 +109,10 @@ cmd = "cd harmony; ./cmd/channel_down.sh"
 type = "Switch"
 
 [services.characteristics]
-Name = "Sammuta"
-ConfiguredName = "Sammuta"
+Name = "Virta"
+ConfiguredName = "Virta"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/power_off.sh"
+cmd = "cd harmony; ./cmd/power.sh"
 
 
 [[services]]
@@ -122,7 +122,7 @@ type = "Switch"
 Name = "TV"
 ConfiguredName = "TV"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh \"Watch TV\""
+cmd = "cd harmony; ./cmd/start_activity.sh 42565715"
 
 
 [[services]]
@@ -132,7 +132,7 @@ type = "Switch"
 Name = "Musiikki"
 ConfiguredName = "Musiikki"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh \"Listen to Music\""
+cmd = "cd harmony; ./cmd/start_activity.sh 42565951"
 
 
 [[services]]
@@ -142,7 +142,7 @@ type = "Switch"
 Name = "AppleTV"
 ConfiguredName = "AppleTV"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh \"Watch Apple TV\""
+cmd = "cd harmony; ./cmd/start_activity.sh 42565987"
 
 
 [[services]]
@@ -152,7 +152,7 @@ type = "Switch"
 Name = "BlueRay DVD"
 ConfiguredName = "BlueRay DVD"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh \"Watch a Movie\""
+cmd = "cd harmony; ./cmd/start_activity.sh 42566024"
 
 
 [[services]]
@@ -162,7 +162,7 @@ type = "Switch"
 Name = "Radio"
 ConfiguredName = "Radio"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh Radio"
+cmd = "cd harmony; ./cmd/start_activity.sh 42566293"
 
 
 [[services]]
@@ -172,4 +172,4 @@ type = "Switch"
 Name = "Karaoke"
 ConfiguredName = "Karaoke"
 [services.characteristics.On]
-cmd = "cd harmony; ./cmd/start_activity.sh Karaoke"
+cmd = "cd harmony; ./cmd/start_activity.sh 50868496"

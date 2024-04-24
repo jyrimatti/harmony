@@ -1,9 +1,10 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p dash gnugrep gnused python3Packages.aioharmony
+#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p dash nix curl cacert websocat jq
 set -eu
 
-aioharmony --harmony_ip "$(cat .harmony-ip)" "$1" ${2:+"$2"} ${3:+"$3"} ${4:+"$4"} ${5:+"$5"} \
-  | grep -v '^Trying to connect to HUB'\
-  | grep -v '^Connected to HUB Harmony Hub'\
-  | grep -v '^HUB: Harmony Hub$'\
-  | sed 's/^HUB: Harmony Hub //'
+cmd="$1"
+params="${2:-}"
+
+echo '{"hubId":"'"$(cat .harmony-id)"'","timeout":10,"hbus":{"cmd":"'"$cmd"'","id":1,"params":{"verb": "get",'"$params"'}}}' | {
+    websocat "ws://$(cat .harmony-ip):8088/?domain=svcs.myharmony.com&hubId=$(cat .harmony-id)"
+}

@@ -1,10 +1,10 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p nix dash
+#! nix-shell --pure -i dash -I channel:nixos-23.11-small -p nix dash curl cacert websocat jq
 set -eu
 
 condition="${1:-}"
 
-ret="$(./query.sh show_current_activity | sed 's/\(.*\)([0-9]*)/\1/')"
+ret="$(dash ./query.sh 'vnd.logitech.harmony\/vnd.logitech.harmony.engine?getCurrentActivity' | jq -r '.data.result')"
 if [ "$condition" = "" ]; then
     echo "$ret"
 else
