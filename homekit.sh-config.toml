@@ -1,3 +1,7 @@
+bridge = "harmony"
+port = 12301
+username = "AA:AA:AA:AA:AA:01"
+
 [[services]]
 type = "AccessoryInformation"
 
@@ -6,7 +10,7 @@ Identify = {} # leave property completely out 'cos otherwise Homekit won't accep
 Manufacturer = "Jyri-Matti Lähteenmäki"
 Model = "Harmony"
 Name = "Harmony"
-SerialNumber = "AA:AA:AA:AA:AA:FF"
+SerialNumber = "AA:AA:AA:AA:AA:01"
 FirmwareRevision = "100.1.1"
 
 
