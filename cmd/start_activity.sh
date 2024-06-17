@@ -4,9 +4,13 @@ set -eu
 
 activity="$1"
 getset="${2:-}"
+value="${5:-}"
 
 if [ "$getset" = "Set" ]; then
-    response="$(dash ./query.sh 'vnd.logitech.harmony\/vnd.logitech.harmony.engine?startactivity' \""activityId": "$activity"\")"
+    if [ "$value" = "0" ]; then
+        activity="-1"
+    fi
+    response="$(dash ./query.sh 'vnd.logitech.harmony\/vnd.logitech.harmony.engine?startactivity' "\"activityId\":\"$activity\"")"
     echo 1
 else
     ret="$(dash ./cmd/current_activity.sh)"
