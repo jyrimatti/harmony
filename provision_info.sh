@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure --keep CREDENTIALS_DIRECTORY -i dash -I channel:nixos-23.11-small -p dash curl cacert
+#! nix-shell --pure --keep CREDENTIALS_DIRECTORY -i dash -I channel:nixos-24.11-small -p dash curl cacert
 set -eu
 
 . ./harmony_env.sh
